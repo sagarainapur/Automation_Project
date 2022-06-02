@@ -8,12 +8,14 @@ sudo apt-get install apache2
 sudo systemctl enable apache2
 sudo systemctl start apache2.service
 
+
 #Create a Tar archive
 
 timestamp=`date +%d%m%Y-%H%M%S`
 cd ~
 cd /tmp/
 tar -zcvf sagar-httpd-logs-${timestamp}.tar.gz /var/log/apache/
+
 
 #Place the tar archive in s3 bucket
 
